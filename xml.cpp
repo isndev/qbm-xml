@@ -26,7 +26,7 @@ public:
         : prot(parent) {}
 
     virtual void
-    write(const void *data, size_t size) override final {
+    write(const void *data, size_t size) final {
         prot.put(static_cast<const char *>(data), size);
     }
 };
